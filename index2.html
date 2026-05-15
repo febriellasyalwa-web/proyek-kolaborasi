@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg,#0f1020,#171a35,#10142b);
+      color:white;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    /* background glow */
+    body::before{
+      content:'';
+      position:absolute;
+      width:350px;
+      height:350px;
+      background:#7b4dff;
+      border-radius:50%;
+      filter:blur(140px);
+      top:-100px;
+      left:-100px;
+      opacity:0.5;
+    }
+
+    body::after{
+      content:'';
+      position:absolute;
+      width:300px;
+      height:300px;
+      background:#a855f7;
+      border-radius:50%;
+      filter:blur(130px);
+      bottom:-100px;
+      right:-100px;
+      opacity:0.4;
+    }
+
+    .container{
+      width:90%;
+      max-width:1100px;
+      margin:auto;
+      padding:70px 0;
+      position:relative;
+      z-index:1;
+    }
+
+    .title{
+      text-align:center;
+      font-size:70px;
+      font-weight:800;
+      margin-bottom:50px;
+      color:#c084fc; /* warna ungu untuk tulisan Me */
+      text-shadow:0 0 25px rgba(192,132,252,0.6);
+    }
+
+    .title span{
+      color:white;
+    }
+
+    .about-box{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.1);
+      padding:45px;
+      border-radius:25px;
+      backdrop-filter:blur(10px);
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+      transition:0.3s;
+    }
+
+    .about-box:hover{
+      transform:translateY(-5px);
+      box-shadow:0 15px 40px rgba(123,77,255,0.3);
+    }
+
+    .about-box p{
+      font-size:20px;
+      line-height:2;
+      margin-bottom:28px;
+      color:#f1f1f1;
+      font-weight:400;
+    }
+
+    .about-box p:last-child{
+      margin-bottom:0;
+    }
+
+    /* garis glow */
+    .about-box::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      border-radius:25px;
+      padding:1px;
+      background:linear-gradient(135deg,#7b4dff,#ffffff20);
+      -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+      -webkit-mask-composite:xor;
+      mask-composite:exclude;
+    }
+
+    @media(max-width:768px){
+
+      .title{
+        font-size:48px;
+      }
+
+      .about-box{
+        padding:30px;
+      }
+
+      .about-box p{
+        font-size:16px;
+        line-height:1.9;
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 class="title">
+      <span>My Experience</span> Text
+    </h1>
+
+    <div class="about-box">
+
+      <p>
+        Last month, I created a website project for a school assignment. 
+        At first, I was very excited because I wanted to make a cool and attractive website. 
+        I started by designing the layout, writing HTML and CSS code, and adding some features using JavaScript.
+      </p>
+
+      <p>
+        However, during the process, I faced many challenges. One of the biggest problems was code errors. 
+        Sometimes the website did not appear because there were mistakes in the HTML structure or missing brackets 
+        in the CSS and JavaScript code. I also once wrote the wrong file name, so the CSS was not connected and 
+        the website layout became messy.
+      </p>
+
+      <p>
+        In addition, some features did not work as I expected. For example, the navigation bar could not be clicked, 
+        images did not appear, and the responsive layout looked untidy on smaller screens. 
+        I had to check the code line by line to find the mistakes.
+      </p>
+
+      <p>
+        Even though I often felt tired and struggled during the process, I did not give up. 
+        I tried to find solutions on the internet, watched tutorials, and fixed the code step by step. 
+        After several revisions and improvements, the website was finally completed successfully.
+      </p>
+
+      <p>
+        From this experience, I learned to be more patient, careful, and persistent when facing problems while creating a website.
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
